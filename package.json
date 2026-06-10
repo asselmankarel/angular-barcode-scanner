@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "github-build": "ng build --configuration production --base-href https://github.com/asselmankarel/barcode-scanner/",
-    "github-deploy": "npx angular-cli-ghpages --dir=dist/barcode-scanner --no-silent"
+    "github-build": "ng build --configuration production --base-href https://github.com/asselmankarel/angular-barcode-scanner/",
+    "github-deploy": "npx angular-cli-ghpages --dir=dist/barcode-scanner/browser --no-silent"
   },
   "prettier": {
     "printWidth": 100,
