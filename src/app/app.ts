@@ -8,6 +8,7 @@ import { Html5QrcodeScanner, Html5QrcodeSupportedFormats } from 'html5-qrcode';
   styleUrls: ['./app.scss'],
 })
 export class App implements OnInit {
+  scannedCode = signal<string>('');
   ngOnInit(): void {
     const scanner = new Html5QrcodeScanner(
       'reader',
@@ -24,7 +25,7 @@ export class App implements OnInit {
     );
     scanner.render(
       (result) => {
-        console.log('Scanned result:', result);
+        this.scannedCode.set(result);
         scanner.clear();
       },
       (error) => {
